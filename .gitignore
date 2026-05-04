@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (for the docx builder)
+node_modules/
+
+# Don't commit raw per-question results — they're large and contain generated text
+results/
+report_assets/data/
+
+# Don't commit the literature-grounded mock summary —
+# replace it with a real one from the Colab run before pushing
+report_assets/final_summary_MOCK.json
+
+# DO commit figures and the real summary
+!report_assets/figures/
+!report_assets/figures/*.png
+
+# Local previews / build artifacts
+preview-*.jpg
+middle-*.jpg
+later-*.jpg
+*.tmp
+
+# Local dataset caches (HuggingFace)
+.cache/

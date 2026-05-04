@@ -1,0 +1,270 @@
+{
+  "config": {
+    "models": {
+      "qwen2.5-0.5b": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qwen2.5-1.5b": "Qwen/Qwen2.5-1.5B-Instruct",
+      "qwen2.5-3b": "Qwen/Qwen2.5-3B-Instruct"
+    },
+    "n_questions": 1000,
+    "sem_sim_threshold": 0.65,
+    "n_folds": 5,
+    "target_abstention": 0.3,
+    "features": [
+      "avg_entropy",
+      "avg_logprob",
+      "min_logprob",
+      "seq_len",
+      "self_confidence"
+    ],
+    "seed": 42
+  },
+  "baseline_metrics": {
+    "qwen2.5-0.5b": {
+      "substring_correct": {
+        "accuracy": 0.235,
+        "hallucination_rate": 0.334,
+        "avg_confidence": 0.613491965281536,
+        "avg_confidence_correct": 0.6903028252528473,
+        "avg_confidence_wrong": 0.5898964723491725,
+        "avg_entropy_correct": 1.117934382268855,
+        "avg_entropy_wrong": 1.538538747321176,
+        "n": 1000
+      },
+      "semantic_correct": {
+        "accuracy": 0.105,
+        "hallucination_rate": 0.439,
+        "avg_confidence": 0.613491965281536,
+        "avg_confidence_correct": 0.6517937631828916,
+        "avg_confidence_wrong": 0.6089984582651758,
+        "avg_entropy_correct": 1.3291559826503823,
+        "avg_entropy_wrong": 1.4526651881068051,
+        "n": 1000
+      }
+    },
+    "qwen2.5-1.5b": {
+      "substring_correct": {
+        "accuracy": 0.385,
+        "hallucination_rate": 0.206,
+        "avg_confidence": 0.6744301095712713,
+        "avg_confidence_correct": 0.7765431102317637,
+        "avg_confidence_wrong": 0.6105057107838084,
+        "avg_entropy_correct": 0.6947822903610288,
+        "avg_entropy_wrong": 1.3272948917435532,
+        "n": 1000
+      },
+      "semantic_correct": {
+        "accuracy": 0.344,
+        "hallucination_rate": 0.247,
+        "avg_confidence": 0.6744301095712713,
+        "avg_confidence_correct": 0.7632558686137112,
+        "avg_confidence_wrong": 0.6278507481221869,
+        "avg_entropy_correct": 0.7269454417097847,
+        "avg_entropy_wrong": 1.2708968113767003,
+        "n": 1000
+      }
+    },
+    "qwen2.5-3b": {
+      "substring_correct": {
+        "accuracy": 0.462,
+        "hallucination_rate": 0.157,
+        "avg_confidence": 0.7977648773725,
+        "avg_confidence_correct": 0.8762870602724625,
+        "avg_confidence_wrong": 0.7303350474472536,
+        "avg_entropy_correct": 0.3615835149339988,
+        "avg_entropy_wrong": 0.8261453596861627,
+        "n": 1000
+      },
+      "semantic_correct": {
+        "accuracy": 0.372,
+        "hallucination_rate": 0.236,
+        "avg_confidence": 0.7977648773725,
+        "avg_confidence_correct": 0.8737728049199125,
+        "avg_confidence_wrong": 0.752741073156517,
+        "avg_entropy_correct": 0.3688184751457923,
+        "avg_entropy_wrong": 0.7552823481790257,
+        "n": 1000
+      }
+    }
+  },
+  "calibration_head": {
+    "qwen2.5-0.5b": {
+      "semantic": {
+        "auroc_oof": 0.848757648310721,
+        "auroc_mean": 0.8533652567172121,
+        "auroc_std": 0.05117884758482877,
+        "brier": 0.16482729370898305,
+        "ece": 0.24853630194535464,
+        "n_pos": 105,
+        "n_neg": 895,
+        "mean_coef": {
+          "avg_entropy": -0.5676012298267399,
+          "avg_logprob": -0.406709523234027,
+          "min_logprob": 0.896118394856288,
+          "seq_len": -0.11878248309058045,
+          "self_confidence": 0.34616201324594575
+        }
+      },
+      "substring": {
+        "auroc_oof": 0.7126352384925602,
+        "auroc_mean": 0.7130023640661938,
+        "auroc_std": 0.019274594278495403,
+        "brier": 0.2160883817675085,
+        "ece": 0.23083196786470625,
+        "n_pos": 235,
+        "n_neg": 765,
+        "mean_coef": {
+          "avg_entropy": -0.7609159882995499,
+          "avg_logprob": -0.38246108364427933,
+          "min_logprob": 0.6409770256853312,
+          "seq_len": 0.004844985866713731,
+          "self_confidence": 0.4950403245022395
+        }
+      }
+    },
+    "qwen2.5-1.5b": {
+      "semantic": {
+        "auroc_oof": 0.854110536018151,
+        "auroc_mean": 0.8550018547080299,
+        "auroc_std": 0.01775169202487241,
+        "brier": 0.15740871952527502,
+        "ece": 0.09591945181869789,
+        "n_pos": 344,
+        "n_neg": 656,
+        "mean_coef": {
+          "avg_entropy": -1.564252048482044,
+          "avg_logprob": -0.7512336341019182,
+          "min_logprob": 0.7941675083720506,
+          "seq_len": -0.30068470322025037,
+          "self_confidence": 1.380801485544045
+        }
+      },
+      "substring": {
+        "auroc_oof": 0.8464998416217928,
+        "auroc_mean": 0.8485059655791363,
+        "auroc_std": 0.021303621352577917,
+        "brier": 0.15944754557161686,
+        "ece": 0.07397627908058671,
+        "n_pos": 385,
+        "n_neg": 615,
+        "mean_coef": {
+          "avg_entropy": -1.0141675827296108,
+          "avg_logprob": -0.12888977333444712,
+          "min_logprob": 1.1887622025370255,
+          "seq_len": -0.048795243438280664,
+          "self_confidence": 1.7910196711052309
+        }
+      }
+    },
+    "qwen2.5-3b": {
+      "semantic": {
+        "auroc_oof": 0.8899304842134099,
+        "auroc_mean": 0.8908524616044616,
+        "auroc_std": 0.019222472958438895,
+        "brier": 0.13497386888463822,
+        "ece": 0.06863279763519729,
+        "n_pos": 372,
+        "n_neg": 628,
+        "mean_coef": {
+          "avg_entropy": -1.4375530085147918,
+          "avg_logprob": -0.4861641320088627,
+          "min_logprob": 0.6382708521336016,
+          "seq_len": -0.244504104822766,
+          "self_confidence": 1.5167420824417566
+        }
+      },
+      "substring": {
+        "auroc_oof": 0.8619586732969633,
+        "auroc_mean": 0.8652478181737859,
+        "auroc_std": 0.03431274802314379,
+        "brier": 0.1480484546204388,
+        "ece": 0.0486931036421258,
+        "n_pos": 462,
+        "n_neg": 538,
+        "mean_coef": {
+          "avg_entropy": -0.9790512371823705,
+          "avg_logprob": -0.400604054231925,
+          "min_logprob": 1.3064018214390871,
+          "seq_len": 0.010025535391132106,
+          "self_confidence": 2.0961691088140078
+        }
+      }
+    }
+  },
+  "strategy_comparison": {
+    "qwen2.5-0.5b": {
+      "no_calibration": {
+        "cond_accuracy": 0.105,
+        "hallucination_rate": 0.895,
+        "abstention_rate": 0.0
+      },
+      "entropy_threshold": {
+        "threshold": 1.7134284303686211,
+        "cond_accuracy": 0.11,
+        "hallucination_rate": 0.623,
+        "abstention_rate": 0.30000000000000004
+      },
+      "self_conf_threshold": {
+        "threshold": 0.5,
+        "cond_accuracy": 0.10574018126888217,
+        "hallucination_rate": 0.888,
+        "abstention_rate": 0.007000000000000006
+      },
+      "trained_head": {
+        "threshold": 0.12168605004598354,
+        "cond_accuracy": 0.1442857142857143,
+        "hallucination_rate": 0.599,
+        "abstention_rate": 0.30000000000000004
+      }
+    },
+    "qwen2.5-1.5b": {
+      "no_calibration": {
+        "cond_accuracy": 0.344,
+        "hallucination_rate": 0.656,
+        "abstention_rate": 0.0
+      },
+      "entropy_threshold": {
+        "threshold": 1.3314032891765235,
+        "cond_accuracy": 0.44285714285714284,
+        "hallucination_rate": 0.39,
+        "abstention_rate": 0.30000000000000004
+      },
+      "self_conf_threshold": {
+        "threshold": 0.0,
+        "cond_accuracy": 0.344,
+        "hallucination_rate": 0.656,
+        "abstention_rate": 0.0
+      },
+      "trained_head": {
+        "threshold": 0.2043644897035143,
+        "cond_accuracy": 0.4685714285714286,
+        "hallucination_rate": 0.372,
+        "abstention_rate": 0.30000000000000004
+      }
+    },
+    "qwen2.5-3b": {
+      "no_calibration": {
+        "cond_accuracy": 0.372,
+        "hallucination_rate": 0.628,
+        "abstention_rate": 0.0
+      },
+      "entropy_threshold": {
+        "threshold": 0.7663302985019982,
+        "cond_accuracy": 0.4664764621968616,
+        "hallucination_rate": 0.374,
+        "abstention_rate": 0.29900000000000004
+      },
+      "self_conf_threshold": {
+        "threshold": 0.0,
+        "cond_accuracy": 0.372,
+        "hallucination_rate": 0.628,
+        "abstention_rate": 0.0
+      },
+      "trained_head": {
+        "threshold": 0.14820345948278707,
+        "cond_accuracy": 0.5157142857142857,
+        "hallucination_rate": 0.339,
+        "abstention_rate": 0.30000000000000004
+      }
+    }
+  }
+}
