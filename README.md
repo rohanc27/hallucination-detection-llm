@@ -13,7 +13,7 @@ Three instruction-tuned Qwen2.5 models (0.5B, 1.5B, 3B) evaluated on 1000 Trivia
 - At a fixed 30% abstention budget, the trained head **cuts the hallucination rate from 0.66 → 0.38 on Qwen-1.5B and 0.63 → 0.36 on Qwen-3B**, and beats both single-signal baselines (entropy-only, self-confidence-only) across all three sizes.
 - Self-confidence is the dominant predictive feature for the 1.5B and 3B models; for the 0.5B model it's nearly useless and `min_logprob` carries most of the signal — calibration-of-self-confidence appears to be an emergent capability of scale.
 - The method **generalizes to general-knowledge QA but degrades to near-random (AUROC ≈ 0.52–0.55) on adversarial benchmarks like TruthfulQA** — see Limitations.
-- Full pipeline runs in **~3 GPU-hours on a free Colab T4**.
+- Full pipeline runs in **under 30 minutes on a Colab H100**.
 
 ![Strategy comparison on TriviaQA](report_assets/figures/fig_tqa_strategy.png)
 
@@ -60,10 +60,10 @@ Three instruction-tuned Qwen2.5 models (0.5B, 1.5B, 3B) evaluated on 1000 Trivia
 
 ## Reproducing the experiments
 
-### Option A — full reproduction (Colab, ~3 GPU-hours)
+### Option A — full reproduction (Colab, ~30 minutes on H100)
 
 1. Open [`hallucination_detection.ipynb`](hallucination_detection.ipynb) in Google Colab.
-2. **Runtime → Change runtime type → T4 GPU** (the free tier is sufficient).
+2. **Runtime → Change runtime type → H100 GPU** (Colab Pro/Pro+ required).
 3. Run all cells. The long-running cell is the per-model evaluation loop.
 4. Results are written to `MyDrive/stat453_project/results/` — the key files are `triviaqa_summary.json` and `final_summary.json`.
 
