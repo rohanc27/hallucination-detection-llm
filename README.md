@@ -23,9 +23,9 @@ Three instruction-tuned Qwen2.5 models (0.5B, 1.5B, 3B) evaluated on 1000 Trivia
 |---|---|
 | [`hallucination_detection.ipynb`](hallucination_detection.ipynb) | Main Colab notebook — runs the full experiment end-to-end |
 | [`build_report_assets.py`](build_report_assets.py) | Generates figures from the notebook's JSON output |
-| `report_assets/figures/` | All figures generated from the experimental results |
-| `report_assets/triviaqa_summary.json` | Consolidated metrics from the TriviaQA run (primary) |
-| `report_assets/final_summary.json` | Consolidated metrics from the TruthfulQA stress-test run |
+| [`report_assets/figures/`](report_assets/figures/) | All figures generated from the experimental results |
+| [`report_assets/triviaqa_summary.json`](report_assets/triviaqa_summary.json) | Consolidated metrics from the TriviaQA run (primary) |
+| [`report_assets/final_summary.json`](report_assets/final_summary.json) | Consolidated metrics from the TruthfulQA stress-test run |
 
 ## Method, in one diagram
 
