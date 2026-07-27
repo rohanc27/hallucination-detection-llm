@@ -1,0 +1,32 @@
+datasets:
+- triviaqa
+- truthfulqa
+- squad_v2
+- hotpotqa
+- custom
+models:
+- qwen2.5-0.5b
+- gpt2
+- pythia-160m
+n_splits: 5
+random_state: 42
+max_new_tokens: 50
+device: cpu
+dtype: auto
+n_samples_per_dataset: 200
+features_enabled:
+  avg_entropy: true
+  avg_logprob: true
+  min_logprob: true
+  seq_length: true
+  self_confidence: true
+  mc1_top_prob: true
+  token_variance: false
+  attention_entropy: false
+calibration_methods:
+- logistic_regression
+data_dir: results/data
+log_dir: results/logs
+figures_dir: results/figures
+summaries_dir: results/summaries
+reports_dir: results/reports
