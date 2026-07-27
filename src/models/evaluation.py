@@ -107,7 +107,8 @@ def evaluate_model_on_fold(
             logger.warning(f"Failed on example {idx}: {e}")
             continue
     
-    # Save JSONL
+    # Save JSONL (create parent directory if needed)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, 'w') as f:
         for r in results:
             f.write(json.dumps(r) + '\n')

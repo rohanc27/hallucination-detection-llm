@@ -6,12 +6,12 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.logging_utils import setup_logging
 from src.config import Config
-from src.data.loaders import load_dataset
+from src.data.loaders import load_triviaqa
 from src.data.splits import load_splits
 from src.models.evaluation import evaluate_model_on_fold
 
 def main():
-    logger, log_path = setup_logging()
+    logger, log_path, run_id = setup_logging()
     config = Config()
     
     logger.info("="*70)
@@ -20,7 +20,7 @@ def main():
     
     # Load first dataset (TriviaQA)
     logger.info("Loading TriviaQA...")
-    dataset = load_dataset('triviaqa', n_samples=100)
+    dataset = load_triviaqa(n_samples=100)
     logger.info(f"Loaded {len(dataset)} examples")
     
     # Load splits
