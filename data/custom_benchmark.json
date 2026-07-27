@@ -1,0 +1,77 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "correct_answers": ["Paris"],
+    "incorrect_answers": ["London", "Berlin", "Madrid"]
+  },
+  {
+    "question": "Who wrote the play 'Hamlet'?",
+    "correct_answers": ["William Shakespeare", "Shakespeare"],
+    "incorrect_answers": ["Christopher Marlowe", "Ben Jonson"]
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "correct_answers": ["Au"],
+    "incorrect_answers": ["Ag", "Go", "Gd"]
+  },
+  {
+    "question": "In what year did World War II end?",
+    "correct_answers": ["1945"],
+    "incorrect_answers": ["1944", "1946", "1939"]
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "correct_answers": ["Jupiter"],
+    "incorrect_answers": ["Saturn", "Neptune", "Earth"]
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "correct_answers": ["Leonardo da Vinci", "da Vinci"],
+    "incorrect_answers": ["Michelangelo", "Raphael"]
+  },
+  {
+    "question": "What is the boiling point of water at sea level in Celsius?",
+    "correct_answers": ["100"],
+    "incorrect_answers": ["90", "212", "0"]
+  },
+  {
+    "question": "What is the smallest prime number?",
+    "correct_answers": ["2"],
+    "incorrect_answers": ["1", "0", "3"]
+  },
+  {
+    "question": "Which continent is the Sahara Desert located on?",
+    "correct_answers": ["Africa"],
+    "incorrect_answers": ["Asia", "South America", "Australia"]
+  },
+  {
+    "question": "What language has the most native speakers worldwide?",
+    "correct_answers": ["Mandarin Chinese", "Mandarin"],
+    "incorrect_answers": ["English", "Spanish", "Hindi"]
+  },
+  {
+    "question": "What is the currency used in Japan?",
+    "correct_answers": ["Yen"],
+    "incorrect_answers": ["Won", "Yuan", "Ringgit"]
+  },
+  {
+    "question": "Who developed the theory of general relativity?",
+    "correct_answers": ["Albert Einstein", "Einstein"],
+    "incorrect_answers": ["Isaac Newton", "Niels Bohr"]
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "correct_answers": ["Mount Everest", "Everest"],
+    "incorrect_answers": ["K2", "Kilimanjaro", "Denali"]
+  },
+  {
+    "question": "How many continents are there on Earth?",
+    "correct_answers": ["7", "seven"],
+    "incorrect_answers": ["5", "6", "8"]
+  },
+  {
+    "question": "What gas do plants primarily absorb during photosynthesis?",
+    "correct_answers": ["Carbon dioxide", "CO2"],
+    "incorrect_answers": ["Oxygen", "Nitrogen", "Hydrogen"]
+  }
+]
