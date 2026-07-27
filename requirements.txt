@@ -1,0 +1,12 @@
+torch
+transformers>=4.40
+datasets
+sentence-transformers
+scikit-learn
+numpy
+pandas
+matplotlib
+seaborn
+tqdm
+pyyaml
+pytest

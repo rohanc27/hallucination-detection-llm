@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hallucination-detection-llm"
+version = "0.1.0"
+description = "Multi-model, multi-dataset hallucination detection via token-level uncertainty"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
