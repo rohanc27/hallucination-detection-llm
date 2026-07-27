@@ -23,7 +23,6 @@ Thumbs.db
 node_modules/
 
 # Don't commit raw per-question results — they're large and contain generated text
-results/
 report_assets/data/
 
 # Don't commit the literature-grounded mock summary —
@@ -42,3 +41,15 @@ later-*.jpg
 
 # Local dataset caches (HuggingFace)
 .cache/
+
+# New pipeline (src/) large/intermediate outputs
+results/logs/*.log
+results/data/*
+!results/data/.gitkeep
+results/figures/*.png
+!results/figures/.gitkeep
+*.pkl
+*.pt
+*.pth
+.env
+.pytest_cache/
